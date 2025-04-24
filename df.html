@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css"
+/>
+<!-- DataTables JS -->
+<script
+  src="https://cdn.datatables.net/2.2.2/js/dataTables.js"
+></script>
+</head>
+<body>
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (10, 18)</small><table border="1" class="dataframe"><thead><tr><th>player_id</th><th>pa</th><th>bb</th><th>k</th><th>h</th><th>d</th><th>t</th><th>hr</th><th>hp</th><th>pitches_seen</th><th>bb%_mlb</th><th>k%_mlb</th><th>1b%_mlb</th><th>2b%_mlb</th><th>3b%_mlb</th><th>hr%_mlb</th><th>hp%_mlb</th><th>pitches/plate_appearance_mlb</th></tr><tr><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td></tr></thead><tbody><tr><td>3546</td><td>52</td><td>2</td><td>14</td><td>11</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.038462</td><td>0.269231</td><td>0.211538</td><td>0.038462</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td>2114</td><td>72</td><td>0</td><td>18</td><td>10</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.25</td><td>0.138889</td><td>0.0</td><td>0.013889</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td>3022</td><td>121</td><td>10</td><td>61</td><td>7</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0.082645</td><td>0.504132</td><td>0.057851</td><td>0.008264</td><td>0.0</td><td>0.008264</td><td>0.0</td><td>0.0</td></tr><tr><td>9840</td><td>5227</td><td>395</td><td>302</td><td>1252</td><td>159</td><td>82</td><td>32</td><td>38</td><td>0</td><td>0.075569</td><td>0.057777</td><td>0.239526</td><td>0.030419</td><td>0.015688</td><td>0.006122</td><td>0.00727</td><td>0.0</td></tr><tr><td>13785</td><td>37</td><td>3</td><td>1</td><td>7</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.081081</td><td>0.027027</td><td>0.189189</td><td>0.027027</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td>14952</td><td>5063</td><td>164</td><td>109</td><td>1418</td><td>147</td><td>67</td><td>15</td><td>53</td><td>0</td><td>0.032392</td><td>0.021529</td><td>0.280071</td><td>0.029034</td><td>0.013233</td><td>0.002963</td><td>0.010468</td><td>0.0</td></tr><tr><td>539</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td></tr><tr><td>8012</td><td>7</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.142857</td><td>0.0</td><td>0.142857</td><td>0.142857</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td>28579</td><td>4</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.25</td><td>0.25</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td>7997</td><td>169</td><td>30</td><td>16</td><td>35</td><td>2</td><td>2</td><td>2</td><td>4</td><td>0</td><td>0.177515</td><td>0.094675</td><td>0.207101</td><td>0.011834</td><td>0.011834</td><td>0.011834</td><td>0.023669</td><td>0.0</td></tr></tbody></table></div>
+<script>
+$(document).ready(function(){
+    $('table').addClass("display")
+    $('table').removeClass("dataframe")
+    $('table').css("border", 'none')
+
+    $('table').DataTable({
+        "paging": true,
+        "pageLength": 50
+    });
+});
+</script>
+</body>
+</html>
